@@ -1,0 +1,32 @@
+body{
+    background-color: #333;
+}
+#map{
+    border: 5px solid #555;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+#map div{
+    width: 48px;
+    height: 48px;
+    border: 1px solid #555;
+    float: left;
+}
+#map .pacman{
+    background-image: url(../../img/pacman.png);
+    
+}
+#map .coin{
+  background-image: url(../../img/coin.png);
+}
+#map .life{
+    background-image: url(../../img/heart.png);
+  }
+  #map .bomb{
+    background-image: url(../../img/bomb.png);
+  }
+#map .explode{
+    background-image: url(../../img/explode.gif);
+    background-size: cover;
+}
