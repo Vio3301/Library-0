@@ -1,0 +1,19 @@
+$color-dark: #151418;
+$color-light: #1B1A1E;
+$color: #908F95;
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: $color-dark;
+}
+#navbar{
+    background-color: red;
+    width: 100vw;
+    height: 10vh;
+    ul{
+        margin-left: 30px;
+     display: flex;
+     justify-content: space-around;
+     align-items: baseline;
+    }
+}
