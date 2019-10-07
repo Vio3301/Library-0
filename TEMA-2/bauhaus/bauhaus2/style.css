@@ -1,0 +1,334 @@
+body{
+    color: white;
+    
+}
+/*/////////////////////////// Header ////////////////////////*/
+#navbar{
+    position: absolute;
+    width: 100vw;
+    height: 15vh;
+    z-index: 1;
+
+}
+#navbar img{
+  margin-top: 2vh;
+  margin-left: 2.2vw;
+}
+#navbar h2{
+    position: absolute;
+    top: 2.6vh;
+    left: 6.4vw;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+#navbar p.sublog{
+    position: absolute;
+    left: 6.4vw;
+    top: 5.5vh;
+    color: rgb(187, 174, 174);
+}
+#navbar nav p{
+    position: absolute;
+    top: 4.6vh;
+    left: 19vw;
+    font-size: 1.1em;
+}
+#navbar nav a{
+    text-decoration: none;
+    color: white;
+}
+
+#navbar nav ul li{
+    position: absolute;
+    left: 39vw;
+    top: 4.6vh;
+    font-size: 1.3em;
+}
+#navbar nav ul li:nth-child(2){
+    left: 41vw;
+}
+#navbar nav ul li:nth-child(3){
+    left: 43vw;
+}
+#navbar nav ul li:nth-child(4){
+    left: 45vw;
+}
+#navbar nav ul li:nth-child(5){
+    left: 47vw;
+}
+#navbar nav ul li:last-child{
+    left: 95vw;
+}
+
+#navbar nav ul li a:first-child:hover{
+    color: #e0fd38;
+}
+#navbar nav ul li a:nth-child(2):hover{
+    color: #e0fd38;
+}
+#navbar nav ul li a:nth-child(3):hover{
+    color: #e0fd38;
+}
+#navbar nav ul li a:nth-child(4):hover{
+    color: #e0fd38;
+}
+#navbar nav ul li a:last-child(5):hover{
+    color: #e0fd38;
+}
+#navbar nav ul li a:last-child:hover{
+    color: #e0fd38;
+}
+
+/* ///////////////////////////////////////////////////////////// */
+
+
+#carusel{
+    
+    background-size: cover;
+    position: absolute;
+     width: 100vw;
+    height: 100vh;
+    background-position: center;
+    animation: background 25s cubic-bezier(1,0,0,1) infinite;  
+}
+#carusel .slaids{
+    width: 80%;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    margin: auto;
+    
+}
+#carusel .slaids p a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+}
+#carusel .slaids a.rotate_link {
+position: absolute;
+left: -11.4vw;
+top: 20.5vh;
+transform: rotate(90deg);
+border-bottom: 1px solid rgb(104, 102, 102);
+}
+#carusel .slaids h2{
+     font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transform: scaleX(1.2);
+    transform-origin: left;
+    letter-spacing: 0.03em;
+    position: absolute;
+    float: left;
+    top: 1em;
+    left: 4.5em;
+}
+
+#carusel .slaids a.all_project{
+     text-transform: uppercase;
+     position: absolute;
+     font-weight: 600;
+     top: 21.4em;
+     left: 37em;
+     font-size: 1.5em;
+
+}
+#carusel .slaids a.all_project i{
+    font-size: 1.7em;
+    position: absolute;
+    top:-0.2em;
+    left: 6.8em;
+}
+
+#carusel .slaid div:first-child{
+    width: 14vw;
+    height: 20vh;
+    position: absolute;
+    left: 9vw;
+    top: 13vh;
+    border: 2px solid white;
+}
+#carusel .slaid div:nth-child(2){
+    width: 14vw;
+    height: 20vh;
+    position: absolute;
+    left: 25vw;
+    top: 13vh;
+    border: 2px solid white;
+}
+#carusel .slaid div:nth-child(3){
+    width: 14vw;
+    height: 20vh;
+    position: absolute;
+    left: 41vw;
+    top: 13vh;
+    border: 2px solid white;
+}
+#carusel .slaid div:nth-child(4){
+    width: 14vw;
+    height: 20vh;
+    position: absolute;
+    left: 57vw;
+    top: 13vh;
+    border: 2px solid white;
+}
+#carusel .slaid div:nth-child(5){
+    width: 14vw;
+    height: 20vh;
+    position: absolute;
+    left: 9vw;
+    top: 36.5vh;
+    border: 2px solid white;
+}
+
+#carusel .slaid div:last-child{
+    width: 14vw;
+    height: 20vh;
+    position: absolute;
+    left: 25vw;
+    top: 36.5vh;
+    border: 2px solid white;
+}
+#carusel .control{
+   
+    position: absolute;
+    width: 2%;
+    bottom: 32%;
+    right: 3%;
+    font-size: 1.2em;
+}
+
+#carusel .control a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-top: 80%
+}
+#carusel .control ul li:first-child, li:last-child{
+    font-size: 2em;
+    
+     transform: scaleX(1.2);
+    
+    
+}
+#carusel .control a.activ{
+color: #e0fd38;
+}
+
+
+/* /////////////////////  Footer  ///////////////////////////// */
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7%;
+   
+}
+footer div.footer li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+footer div.footer li{
+    position: absolute;
+    right: 1vw;
+    top: 0;
+    font-size: 1em;
+}
+footer div.footer li:first-child{
+    top: 0;
+    right: 9em;
+}
+footer div.footer li:nth-child(2){
+    top: 0;
+    right: 6em;
+}
+footer div.footer li:last-child{
+    top: 0;
+    right: 3em;
+}
+footer div.footer p{
+    position: absolute;
+    left: 2.6em;
+}
+
+
+
+
+
+
+#carusel .slaid p.text1{
+    padding-top: 1em;
+    padding-left: 1em;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+#carusel .slaid p:not(.text1){
+    padding-left: 1.5em;
+    padding-top: 1.5em;
+    color: rgb(194, 194, 194);
+}
+ #carusel .slaid div:first-child:hover{
+    background-color: #e1f378;
+    color: #000;
+    border: none;
+}
+#carusel .slaid div:nth-child(2):hover{
+    background-color: #e1f378;
+    color: #000;
+     border: none;
+    
+}
+#carusel .slaid div:nth-child(3):hover{
+    background-color: #e1f378;
+    color: #000;
+     border: none;
+    
+}
+#carusel .slaid div:nth-child(4):hover{
+    background-color: #e1f378;
+    color: #000;
+     border: none;
+    
+}
+#carusel .slaid div:nth-child(5):hover{
+    background-color: #e1f378;
+    color: #000;
+     border: none;
+    
+}
+#carusel .slaid div:last-child:hover{
+    background-color: #e1f378;
+    color: #000;
+     border: none;
+    
+}
+
+#carusel .slaids a.rotate_link:hover{
+  color: #e0fd38;
+}
+#carusel .slaids a.all_project:hover{
+     color: #e0fd38;
+}
+footer div.footer li a:hover{
+    color: #e0fd38;
+}
+
+@keyframes background{
+    0%{  background-image: url(../bauhaus2/img/sl4.jpg)}
+    25%{  background-image: url(../bauhaus2/img/sl6.jpg)}
+    50%{  background-image: url(../bauhaus2/img/sl5.jpg)}
+    75%{  background-image: url(../bauhaus2/img/sl2.jpg)}
+    100%{  background-image: url(../bauhaus2/img/sl3.jpg)}
+    125%{  background-image: url(../bauhaus2/img/sl1.jpg)}
+}
+
+
+
+
+
+
+
+

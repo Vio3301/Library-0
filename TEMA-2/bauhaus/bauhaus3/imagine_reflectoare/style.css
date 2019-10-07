@@ -1,0 +1,28 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #333;
+}
+
+figure {
+  margin: 100px;
+}
+
+figure .reflection {
+  width: 500px;
+  height: 300px;
+  background-image: url(../img/200-500x300.jpg);
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  opacity: 0.5;
+  margin-top: 5px;
+}
+
+figure .reflection::before {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 300px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(40%, transparent), to(#333333));
+  background-image: linear-gradient(to top, transparent 40%, #333333);
+}
+/*# sourceMappingURL=style.css.map */

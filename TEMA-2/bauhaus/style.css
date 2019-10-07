@@ -1,0 +1,119 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+#carusel{
+    background-image: url(../img/slaid-1-LG.jpg);
+    position: absolute;
+     width: 100vw;
+    height: 100vh;
+    background-position: center;
+
+}
+
+
+
+
+/* Adaptam imaginea de fundal */
+@media  (max-width:1000px) {
+   #carusel{
+    background-image: url(img/slaid-1-MD.jpg);
+   }
+}
+@media (max-width: 600px){
+    #carusel{
+        background-image: url(../img/slaid-1-SM.jpg);
+    }
+}
+
+#carusel .slaids{
+    background-color: #3339;
+    width: 80%;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    margin: auto;
+    padding-left: 3em;
+}
+#carusel .btl::after{
+    
+   content: "";
+   width: 70px;
+   height: 3px;
+   display: block;
+   background-color: #cee002;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   
+}
+#carusel .slaid h2{
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 0.9em;
+    transform: scaleX(1.2);
+    transform-origin: left;
+    letter-spacing: -0.1em;
+    position: relative;
+    float: left;
+    top: 6em;
+    
+}
+#carusel .slaid p{
+    font-size: 1.5em;
+    position: absolute;
+    top: 8em;
+}
+#carusel .slaid h2 .activ{
+    color: #cee002;
+    
+}
+#carusel .slaid.darck{
+    
+ color: white;
+}
+#carusel .control{
+   
+    position: absolute;
+    width: 2%;
+    bottom: 32%;
+    right: 6%;
+    font-size: 2em;
+   
+    
+    
+}
+#carusel .control a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 80%
+}
+#carusel .control .activ{
+    color:#cee002;
+}
+@media (max-width:800px){
+    #carusel .control{
+        display: none;
+    }
+}
+@media (max-width:720px){
+    #carusel .slaid h2{
+        font-size: 3em;
+    }
+}
+@media(max-height:600px){
+    #carusel .slaid p{
+        display: none;
+    }
+}
+   @media(max-height:600px){
+    #carusel .control ul li:first-child{
+        display: none;
+    }
+    #carusel .control ul li:last-child{
+        display: none;
+    }
+   }

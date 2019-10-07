@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #submenu {
+            opacity: 0;
+            transition: 0.3s;
+            background-color:#D77F6B;
+        }
+        #submenu:target {
+            opacity: 1;
+        }
+        ul {
+            margin: auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 12px;
+            display: block;
+            color: black;
+            margin-left: 13px;
+        }
+        ul:not(#submenu) {
+            width: 200px;
+        }
+
+        #settings {
+            color: white;
+            background-color: #DE4E33;
+            height: 25px;
+            margin-left: -13px;
+            padding: 12px 11px;
+            width: 205px;
+            font-size: 18px;
+            border-radius: 8px;
+            border-bottom:2px solid #8D372A;
+        }
+        #submenu:target :hover{
+            background-color: #AE6556;
+            
+        }
+        #settings::after{
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            margin: -19px 167px;
+            border-right:3px solid white;
+            border-bottom: 3px solid white; 
+            transform: rotate(45deg);
+            
+        } 
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li><a href="#submenu" id="settings">Dropdown</a> 
+            <ul id="submenu">
+                <li><a href="">Item 1</a></li>
+                <li><a href="">Item 2</a></li>
+                <li><a href="">Item 3</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+</body>
+
+</html>

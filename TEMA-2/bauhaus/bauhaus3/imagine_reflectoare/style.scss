@@ -1,0 +1,35 @@
+$color-dark: #333;
+$color-light: white;
+$w: 500px;
+$h: 500px;
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: $color-dark;
+}
+
+figure{
+    margin: 100px;
+    
+    .reflection{
+      width: $w;
+      height: $h - 200px;
+     background-image: url(../img/200-500x300.jpg);
+     transform: rotateX(180deg);
+     opacity: 0.5;
+     margin-top: 5px;
+  
+    
+
+        &::before{
+            content: "";
+            display: block;
+            width: $w;
+            height: $h - 200px;
+            background-image: linear-gradient(to top,transparent 40%, darken($color-light,80%));
+            
+            
+             
+        }
+    }
+}

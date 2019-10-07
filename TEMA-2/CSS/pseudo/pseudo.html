@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333333;
+            margin: 0;
+        }
+
+        nav {
+            background-color: gray;
+            padding: 20px;
+            text-align: right;
+        }
+
+        input {
+            width: 100px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            transition: 0.5s;
+            padding: 10px 0;
+        }
+
+        input:focus {
+            border-bottom-color: silver;
+            color: rgb(104, 46, 46);
+            width: 400px;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+        }
+
+        button::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid skyblue;
+            border-radius: 100px;
+        }
+
+        button::after {
+            content: "";
+            display: block;
+
+            width: 10px;
+            height: 2px;
+            background-color: skyblue;
+            transform: rotate(45deg);
+            margin-left: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <form> 
+            <label for="">
+                <input type="text" placeholder="search here..">
+            </label>
+            <button>
+
+            </button>
+        </form>
+    </nav>
+</body>
+
+</html>

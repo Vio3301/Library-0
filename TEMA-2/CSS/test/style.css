@@ -1,0 +1,122 @@
+.colors{
+    color:#00B9DE;
+    color: #013236;
+    color: #00C7D7;
+    color: #00F3F1;
+    color:#1C1A1A ;
+}
+
+.logo-lg-1-hex  {color: #05C7F2;} 
+.logo-lg-2-hex { color: #1DDDF2; }
+.logo-lg-3-hex { color: #1B818C; }
+.logo-lg-4-hex { color: #27F2F2; }
+.logo-lg-5-hex { color: #0D0D0D; }
+
+body{
+    background-image: radial-gradient( #0D0D0D 40%,#333333 100%);
+    background-size: 40px 40px;
+    
+}
+body::before{
+    content: "";
+    background-color: inherit;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    
+}
+.brand{
+    background-color:#013236;;
+    width:calc(1.80*30vh);
+    height: 30vh;
+    transform: rotate(90deg); 
+    position: relative;
+    top: 18vh;
+    left: 18vh;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    animation: border-flicker 0.3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+#navbar .brand::before{
+    content:"";
+    background-color: inherit;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+    top:0;
+    left: 0;
+    border-left:  10px outset  transparent;
+    border-right: 10px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    animation: border-flicker 0.3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    
+}
+#navbar .brand::after{
+    content:"";
+    background-color: inherit;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(60deg);
+    top: 0;
+    left: 0;
+    border-left:10px solid transparent;
+    border-right: 10px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    animation: border-flicker 0.3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+
+}
+#navbar .brand a{
+       
+    position: absolute;
+     display: block;
+     z-index: 2;
+     width: 100%;
+     height: 100%;
+     top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-90deg);
+    text-align: center;
+     line-height: 30vh;
+     color: #00F3F1;
+     font-size: 1.4em;
+     font-weight: 300;
+}
+#navbar .brand a img{
+    position: relative;
+     top: 39px;
+}
+#navbar .brand span{
+    font-weight: 900;
+}
+#navbar .main{
+    margin-left:50vw;
+    
+}
+
+@keyframes border-flicker{
+    0%{border-color: transparent}
+    25%{border-color:#00C7D7 }
+    50%{ border-color: transparent}
+    75%{border-color: #00C7D7}
+    100%{border-color:  #00C7D7 }
+
+}

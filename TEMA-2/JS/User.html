@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User class Example</title>
+</head>
+
+<body>
+    
+    <script>
+        class User {
+            
+            constructor(username ,email, password, avatar, created){
+             this.username = username
+             this.email = email
+             this.password = password
+             this.avatar = avatar
+             this.created = created
+           
+            }
+            render(){
+             document.write(`<div style="margin-left: 30px;">
+                   <img src="${this.avatar}" - avatar" />
+                    <h2>username - ${this.username} <br> email - ${this.email}</h2>
+                    <p style="margin-top:-10px;">user has registered ${this.created} | ${this.created}-days ago</p>
+                </div>  ` )
+            }
+        }
+        var user1 = new User("Vasea", "Vasea123@mail.com", 123456,"user.png",1);
+        var user2 = new User("Ion","Ion22ee@gmail.com", 223344,"user2.png",2);
+        var user3 = new User("Sergiu","Sergiufff345@mail.com",338822,"user3.png",3);
+       user1.render();
+       user2.render();
+       user3.render();
+    </script>
+</body>
+
+</html>
+
+
+
+
+

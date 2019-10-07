@@ -1,0 +1,167 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+#slaids{
+    background-image: url(../bauhaus3/img/slaid1.jpg);
+     background-size: cover;
+    position: absolute;
+     width: 100vw;
+    height: 100vh;
+    background-position: center;
+}
+#slaids .slaid {
+    position: absolute;
+    width: 18vw;
+    height: 66vh;
+    top: 13vh;
+    left: 13vw;
+    
+}
+#slaids ul{
+    position: absolute;
+    bottom: 21vh;
+    right: 11vw;
+     opacity: 0;
+    z-index: -2;
+}
+#slaids ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 2.5em;
+}
+#slaids ul li{
+    position: absolute;  
+}
+#slaids ul li a.activ{
+    color: yellow;
+}
+#slaids ul li:first-child{
+    right: 4vw;
+     
+}
+#slaids ul li:nth-child(2){
+ right: 1vw;
+}
+  #slaids .border{
+     position: absolute;
+     width: 18em;
+    height: 37em;
+    top: 13vh;
+    left: 13.5vw;
+    z-index: 1;
+     border: 5px solid yellow; 
+     clip: rect(0,0,0,0); 
+    animation: Border 5s ; 
+    animation-fill-mode:forwards;
+} 
+
+#slaids .slaid p:first-child{
+    text-transform: uppercase;
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    left: 3em;
+    top: 4em;
+    z-index: 3;
+    animation: text2 8s;
+}
+#slaids .slaid p:last-child a{
+    text-decoration: none;
+     color: white;
+     z-index: 3;
+     animation: text 4s;
+     
+}
+#slaids .slaid p:last-child{
+    position: absolute;
+    font-size: 1.2em;
+    font-weight: 600;
+    left: 3em;
+     top: 28em;
+     z-index: 3;
+}
+#slaids .slaid p:last-child i{
+    position: absolute;
+    left: 6.4em;
+    top: -0.09em;
+}
+#slaids .slaid h2{
+     position: absolute;
+    font-size: 5em;
+    font-weight: 600;
+    color: white;
+    width: 30vw;
+    z-index: 2;
+    left: 0.7em;
+     top: 1.9em;
+     animation: text 3.9s;
+     
+}
+#slaids .slaid p:last-child a:hover{
+ color: rgb(250, 250, 93);
+}
+#slaids:hover ul{
+     opacity: 1;
+    z-index: 1;
+    animation-delay: 3s;
+}
+@keyframes Border {
+    clip: rect(0,0,0,0); 
+    animation: Border 5s ; 
+  0% {  clip: rect(400px,0,0px,0); }
+  20%{ clip: rect(450px,0,0,0);}
+  50%{ clip: rect(0,600px,600px,0);}
+  75%{ clip: rect(0,700px,700px,0);}
+   100%{ clip: rect(0,800px,800px,0);}
+}
+@keyframes text{
+     0% { 
+         left: -2em;
+         z-index: -2;
+         opacity: 0;
+      }
+  20%{ left:-1.5em;
+    z-index: -2;
+    opacity: 0;
+      }
+  50%{ 
+      left: -1em;
+      z-index: -2;
+      opacity: 0;
+
+  }
+  75%{left: 0.7em;
+    z-index: 2;
+       opacity:0.8 ;
+     }
+   100%{left: 0.7em;
+    z-index: 2;
+        opacity: 1;
+        }
+}
+@keyframes text2{
+     0% { 
+         right:  -2em;
+         z-index: -2;
+         opacity: 0;
+      }
+  20%{ right:-1.5em;
+    z-index: -2;
+    opacity: 0;
+      }
+  50%{ 
+      right: -1em;
+      z-index: -2;
+      opacity: 0;
+
+  }
+  75%{right: 0.7em;
+    z-index: 2;
+       opacity:0.8 ;
+     }
+   100%{right: 0.7em;
+    z-index: 2;
+        opacity: 1;
+        }
+}
