@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Dinamic Form - DOM</title>
+  </head>
+  <body>
+    <div id="contact-form">
+        <h2>Введи свой номер телефона</h2>
+        <input type="text" placeholder="phone 1"><br>
+    </div>
+
+    <div>
+        <button onclick='inputChange()'>+</button>
+    </div>
+    <script>
+      var n = 1;
+      inputChange();
+      function addPhoneInput(){
+        n++
+        if(n < 6){
+        //alert()
+        //1) искать элемент
+        var form = document.getElementById('contact-form');
+        console.log(form)
+        // 2)create/add element DO NOT USE!
+        //form.innerHTML += '<input type="text" placeholder="phone 1"><br>'
+        // 2)create
+        var input = document.createElement('input');
+            input.type = "text"
+            input.placeholder = `phone ${n}`
+            form.appendChild(input);
+        var br = document.createElement('br');
+            form.appendChild(br);
+        console.log(form)
+        } else{
+          alert("Введи свой номер телефона!")
+        }
+      }
+      function inputChange() {
+        num = document.getElementById('contact-form').children[n].value;
+        if (num == ""){
+          alert("Пусто")
+        } else {
+          addPhoneInput();
+        } 
+      } 
+        //запретить добавление полей больше 5 . 
+        //не допускать добавление новых полей если предыдущее не содержит значени. 
+        //каждый раз когда срабатывает функция найти последний импут и проверить 
+        //если не пусто то создать новое поле value 
+    </script>
+
+  </body>
+</html>
