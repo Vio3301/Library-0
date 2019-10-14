@@ -1,0 +1,10 @@
+body{
+    background-color: #222;
+}
+
+.crack{
+    position: absolute;
+    height: 34%;
+    width: 23%;    
+    background-repeat: no-repeat;
+}
