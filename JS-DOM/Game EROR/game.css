@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+}
+#scene{
+    height: 100px;
+    background-color: #999;
+    
+}
+#scene .dino{
+    background-image: url(../img/dino.png);
+    position: absolute;
+    top: 25px;
+    left: 100px;
+
+   
+}
+
+#scene .dino.jump{
+    animation: jump 0.5s;
+}
+
+@keyframes jump{
+0%{transform: translateY(0px)}
+50%{transform: translateY(-50px)}
+100%{transform: translateY(0px)}
+}
+
+
+/* ///////////////////////////////////// */
+#scene .cactus{
+    background-image: url(../img/dino.png);
+    margin-left: 300px;
+    position: absolute;
+    top: 25px;
+
+
+}
+#scene .cactusSmol{
+    background-image: url(../img/dino.png);
+    margin-left: 500px;
+    position: absolute;
+    top: 39px;
+}
+/* ///////////////////////////////////////////// */
+#scene .bird{
+       background-image: url(../img/dino.png);
+       margin-left: 400px;
+       position: absolute;
+       top: 25px;
+}
