@@ -1,0 +1,59 @@
+#valut{
+   background-color: rgb(247, 243, 214);
+    height: 200px;
+    width: 646px;
+    margin-top: 80px;
+    margin-left: 80px;
+
+}
+#spanInputOne{
+    position: absolute;
+    top: 109px;
+    left: 221px;
+    font-size: 10px;
+    font-weight: 680;
+}
+#spanInputTwo{
+    position: absolute;
+    top: 109px;
+    left: 446px;
+    font-size: 9px;
+    font-weight: 680;
+}
+
+  .select{
+      background-color: #F6AA2D;
+      
+      position: absolute;
+      left: 158px;
+      top: 129px;
+  }
+.select2{
+    background-color: #F6AA2D;
+    position: absolute;
+    right: 436px;
+    top: 129px;
+
+}
+
+.fas{
+    position: absolute;
+    top: 130px;
+    left: 411px;
+    font-size: 22px;
+}
+#input1{
+    margin-top: 46px;
+    float: left;
+    margin-left: 141px;
+    
+}
+#input2{
+     margin-top: 46px;
+    float: right;
+    /* margin-left: -3px; */
+    padding-right: 106px;
+    
+
+}
+
