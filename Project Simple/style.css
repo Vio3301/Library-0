@@ -1,0 +1,100 @@
+a{
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+}
+a:hover{
+    color: black;
+}
+nav.navbar{padding-left: 5%; padding-bottom: 0;}
+nav div.logo span{
+    color: #050505;
+    font-size: 35px;
+    font-weight: 700;
+}
+ul.menu{
+    max-width: 100%;
+    width: 100%;
+    height: 51px;
+    padding-top: 7px;
+}
+ul.menu li{
+    margin-left: 5%;
+    text-transform: uppercase;
+}
+ul.menu li:first-child:not(.subMenu-li){
+    margin-left: 10%;
+}
+ul.menu li.drop:hover ul.subMenu{
+    display: block;
+
+}
+ul.subMenu{
+    background-color: #f1f1f1ff;
+    position: absolute;
+    text-align: center;
+    right: 22%;
+    z-index: 2;
+    top:100% ;
+    display: none;
+
+}
+ul.subMenu li a{
+    text-decoration: none;
+
+}
+/* /////////////////// SECTION PHOTO /////////////////////// */
+section.photo{
+    width: 100%;
+    height: auto;
+}
+div.logo2{
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 12%;
+}
+section.photo div.slide{
+    max-width: 100%;
+    width: 100%;
+  
+}
+div.slide1, div.slide2,  div.slide3, 
+div.slide4,  div.slide5{
+    width: 100%;
+    height: 900px;
+    background-size: cover;
+
+}
+section.photo div.slide .slide1{
+    background-image: url(./img/3aff75_bcdce1a6a2264f958f58cfc6914b10cd.jpg);
+}
+section.photo div.slide .slide2{
+    background-image: url(./img/3aff75_150d2d8a8ed44fd88fb2e59d57ddb529.jpg);
+}
+section.photo div.slide .slide3{
+    background-image: url(./img/3aff75_74a048640cc14bf6b42d2ef9e890ead5_mv2_d_2000_1336_s_2.jpg);
+}
+section.photo div.slide .slide4{
+    background-image: url(./img/3aff75_e21c869155bc494cb6a0a6f4c139590c.jpg);
+}
+section.photo div.slide .slide5{
+    background-image: url(./img/3aff75_dc8f706c8e1841c192e76cfdc7d9d0b7.jpg);
+}
+
+/* ////////////////////////////// Footer ////////////////////// */
+footer{
+    width: 100%;
+    height: 200px;
+}
+div.cont-footer{height: inherit;}
+div.container div.row{height: inherit;}
+div.container div.row div.col-footer{
+    text-align: center;
+    height: inherit;
+    padding-top: 4%;
+}
+/* div.container div.row div.col-lg-12 span{
+  font-size: 14px;
+ 
+} */
