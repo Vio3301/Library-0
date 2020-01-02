@@ -1,0 +1,107 @@
+Dim a(5,5),i, s, e , dl,j
+
+'Functia random (aleatoriu)
+Function random_number(lowerLim,upperLim)
+Randomize
+randNumber = Int(((upperLim - lowerLim + 1)*Rnd())+lowerLim) 
+random_number = randNumber
+End Function
+'Creaza tabelu
+For i = 0 to ubound(a)
+   For j = 0 to Ubound(a,2)
+           a(i,j) = random_number(2,7)
+ Next
+ Next     
+'Afiseaza tabelu
+dl = ""
+For i = 0 to ubound(a)
+   For j = 0 to Ubound(a,2)
+   dl = dl & a(i, j) & " "
+   next
+   dl = dl & vbnewline
+next
+Print dl
+print "     "
+' Sortam tabelu { min .... max}
+Dim v,pas,dd
+For i  = 0 To 5 
+  For j = 0 To 5
+    For v = 0 To 5
+      If a(i,j) < a(i,v) Then
+        pas = a(i,j)
+        a(i,j) = a(i,v)
+        a(i,v) = pas
+        
+      End If
+    Next
+  Next
+Next
+
+'Afisam sortarea matricei
+Dim hh
+For i = 0 to ubound(a)
+   For j = 0 to Ubound(a,2)
+    hh = hh & a(i, j) & " "
+   next
+   hh = hh & vbnewline
+   print "Min si Max de pe  linia" & " "& i & ": " & " "& a(i,0) & " "& a(i,5)
+next
+
+'------------------------------------------------------
+' Suma elementelor deasupra diagonalei si sub diagonala
+Dim  b , n,f
+n = 0
+b = 1
+
+For i = 0 To 5
+  For j = 0 To 5
+    If j>i Then
+    n = n + a(i,j)  
+    ElseIf i>j Then
+        b = b * a(i,j)    
+    End if
+  Next
+Next
+f = CLNg(b)
+print " "
+print " "
+print "Suma elementelor deasupra diagonalei principale"& " "& n
+ print "Produsul elementelor aflate sub diagonala principală "& " " & f
+'----------------------------------------------------------------
+' Suma elementelor pe fiecare coloană.
+Dim sum
+sum = 0
+
+For i = 0 To 5
+  For j = 0 To 5
+    sum = sum + a(j,i)
+  Next
+  print sum
+Next
+'------------------------------------------------------------------------
+'Sortarea matricei Crescător, Descrescător
+Dim max,min
+max = a(0,0) 
+min = a(0,0)
+For i  = 0 To 5 
+  For j = 0 To 5
+    
+      If max < a(i,j)  Then
+        max = a(i,j)
+     
+      End If
+  
+  Next
+Next
+
+For i  = 0 To 5 
+  For j = 0 To 5
+    
+      If min > a(i,j)  Then
+        min = a(i,j)
+      End If
+  
+  Next
+Next
+print min
+print max
