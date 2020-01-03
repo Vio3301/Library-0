@@ -1,13 +1,4 @@
 
-
-'Function to get a Size object
-Public Function GetSize(x,y)
-'Create a Size object with constructor int, int
-Set GetSize = DotNetFactory("System.Drawing.Size","System.Drawing", x, y)
-End Function
-
-'——————————————————————————————
-
 'Function to get a Point object
 Public Function GetPoint(x,y)
 'Create a POINT object with constructor int, int
@@ -20,20 +11,9 @@ Public Function GetSize(x,y)
 Set GetSize = DotNetFactory("System.Drawing.Size","System.Drawing", x, y)
 End Function
 
-'X, Y coordinate for a Label
-
 labelWidth = 75
-
-'Width and height of each control
 controlWidth = 160
 controlHeight = 25
-
-'X coordinate of a control in front of the variable
-cDelta = lStartX + labelWidth + 10
-
-'Difference in height between two controls
-deltaHeight = 30
-
 
 '========================================================================================= Label
 'Create a Label object for the requested user name
@@ -51,7 +31,7 @@ End with
 Set oLstEnvironment = DotNetFactory("System.Windows.Forms.ComboBox","System.Windows.Forms")
 
 With oLstEnvironment
-'Name the list box
+
 .Name = "lstEnvironment"
 .Size = GetSize(controlWidth, controlHeight)
 .Location = GetPoint(110,54)
@@ -65,7 +45,7 @@ With oLstEnvironment
 .Items.Add "CheckBox"
 .Items.Add "RadioButton"
 .Items.Add "ComboBox"
-
+.SelectedIndex = 1
 
 End with
 '================================================================================================ Label 2
@@ -95,11 +75,12 @@ With ComboBoxT
 .Items.Clear
 
 'Add items to the combo box list
-.Items.Add "White"
+.Items.Add "Yellow"
 .Items.Add "Green"
 .Items.Add "Red"
 .Items.Add "Blue"
-
+.Items.Add "Black"
+.SelectedIndex = 1
 End with
 '=================================================================================================== Label 3
 'Create a Label object for the requested user name
@@ -126,7 +107,7 @@ With ComboBoxF
 .Items.Add "Centru"
 .Items.Add "Stînga jos"
 .Items.Add "Stînga sus"
-
+.SelectedIndex = 3
 End with
 '==================================================================================================== Button
 Set Button = DotNetFactory.CreateInstance("System.Windows.Forms.Button", "System.Windows.Forms")
@@ -134,102 +115,89 @@ Set dResult = DotNetFactory.CreateInstance("System.Windows.Forms.DialogResult", 
 With Button
 .Text = "Create"
 .Location =  GetPoint(755,110)
-.DialogResult = dResult.Ok
+.DialogResult = dResult.OK
 End With
 '================================================================================================ Forms
 'Create the .NET form object
 Set oForm = DotNetFactory("System.Windows.Forms.Form","System.Windows.Forms")
 
 With oForm
-'Title for the form
+
 .Text = "Enter environment details"
 
-'Make it the top most window
 .TopMost = True
 
-'Set the startup position a CenterScreen
 .StartPosition = .StartPosition.CenterScreen
 
-'Set the form style as a fixed tool window
 .FormBorderStyle = .FormBorderStyle.FixedToolWindow
 
-'Set the size of the window
 .Size = GetSize(900,215)
 
-'Add the controls we just created to the form
 .Controls.Add Objects
-.Controls.Add oTxtUserName
 .Controls.Add oLstEnvironment
 .Controls.Add LabelColor
 .Controls.Add ComboBoxT
 .Controls.add LabelPosition
+.Controls.Add ComboBoxF
 .Controls.add Button
 .Controls.Add dResult
-.Controls.Add ComboBoxF
-.Controls.Add NewObj
+.Controls.Add Color
 
-'Show the form as a modal dialog. Code execution will advance to
-'next line after the user closes the form
 .ShowDialog()
+End with
+
+'---------------------------------------------------------------------------------------
+
+While oForm.DialogResult <> dResult.Cancel
+	
+Select Case oForm.DialogResult
+	Case dResult.OK
+	dim obj,x,y,i
+	
+	obj = oLstEnvironment.Text
+   Set Color = DotNetFactory.CreateInstance("System.Drawing.Color", "System.Drawing")
+	
+	'-------------------------------------------------------------------------
+		Select Case ComboBoxF.Text
+	Case "Dreapta sus"
+	x = 732
+	y = 21
+	Case "Dreapta jos"
+	x = 732
+	y = 140
+	Case "Centru"
+	x = 406
+	y = 110
+	Case "Stînga jos"
+	x = 40
+	y = 113
+	Case "Stînga sus"
+	x = 40
+	y = 12
+    End Select
+ '-------------------------------------------------------------------------------
+	
+Set NewObj = DotNetFactory("System.Windows.Forms."&obj ,"System.Windows.Forms")
+xz = CInt(ComboBoxT.SelectedIndex)
+xy = Array(Color.Yellow,Color.Green,Color.Red,Color.Blue,Color.Black)
+NewObj.BackColor = xy(xz)
+
+With NewObj
+ .Name = "NewObj"
+.Size = GetSize(labelWidth, controlHeight)
+.Location = GetPoint(x,y)
+ 
+'--------------------------------------------------------------------------------
 
 End with
-oForm.dispose
-dim obj,x,y
-
-
-
-'While oForm.DialogResult <> dResult.Cancel
-''Select Case  oForm.DialogResult
-''	dResult.Ok
-''End Select
-''------------------------------------------------------------------------------------
-'obj = oLstEnvironment.Text
-'Set Color = DotNetFactory.CreateInstance("System.Drawing.Color", "System.Drawing")
-''------------------------------------------------------------------------------------
-'	Select Case ComboBoxT.SelectedIndex
-'	Case 1
-'	ComboBoxT.BackColor = Color.Blue
-'	Case 2
-'	ComboBoxT.BackColor = Color.Blue
-'	Case 3
-'	ComboBoxT.BackColor = Color.Blue
-'	Case 4
-'	ComboBoxT.BackColor = Color.Blue
-'End Select
-'
-'Select Case ComboBoxF.Text
-'	Case "Dreapta sus"
-'	x = 732
-'	y = 21
-'	Case "Dreapta jos"
-'	x = 732
-'	y = 140
-'	Case "Centru"
-'	x = 406
-'	y = 110
-'	Case "Stînga jos"
-'	x = 40
-'	y = 113
-'	Case "Stînga sus"
-'	x = 40
-'	y = 12
-'End Select
-''--------------------------------------------------------------------------------
-'
-'If oForm.DialogResult = dResult.OK Then
-'Set NewObj = DotNetFactory("System.Windows.Forms."&obj ,"System.Windows.Forms")
-'With NewObj
-' .Name = "NewObj"
-'.Size = GetSize(controlWidth, controlHeight)
-'.Location = GetPoint(x,y)
-'
-'End With
-'End If
-''-------------------------------------------------------------------------------
-'Wend
-
-
-
+	oForm.Controls.Add NewObj
+	oForm.ShowDialog()
+	oForm.Controls.Remove NewObj
+Case dResult.Cancel
+	msgbox "Completati Rindurile"
+End Select
+	
+Wend
 
 
 'Destroy all of the object reference
